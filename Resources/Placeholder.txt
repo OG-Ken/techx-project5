@@ -1,3 +1,1 @@
 Testing VS Code Github commit and push functions. 
-
-New test for VS Code
