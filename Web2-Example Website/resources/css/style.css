@@ -1,0 +1,376 @@
+@charset "utf-8";
+/* ------------------------------------------------ */
+/* Main */
+/* ------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #fff;
+	color: #555;
+	font-family:'Open Sans', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size:20px;
+	text-rendering: optimizeLegibility;
+}
+
+footer {
+	color: #fff;
+	text-align: center;
+	z-index: 9999;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	font-size: 15px;
+	background-color: rgba(0,0,0,0.60);
+}
+
+/* ------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------*/
+
+header {
+	background-image: linear-gradient(rgba(0,0,0,0.70),rgba(0,0,0,0.75)), url(../img/forest.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+.forest-text-box{
+	position: absolute;
+	width: 1140px;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo {
+	height: 150px;
+	width: auto;
+	float: left;
+}
+
+.navbar {
+	float: right;
+	list-style: none;
+	margin-top: 50px;
+}
+
+.navbar li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.navbar li a:link,
+.navbar li a:visited {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 80%;
+	padding: 5px 0;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+.navbar li a:hover,
+.navbar li a:active {
+	border-bottom: 2px solid #E67E22;
+}
+
+.navbar li button {
+	background: none;
+	color: #fff;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid transparent;
+	font-size: 80%;
+	padding: 5px 0;
+	transition: border-bottom 0.2s;
+}
+.navbar li button:hover,
+.navbar li button:active {
+	border-bottom: 2px solid #E67E22;
+}
+
+/* ------------------------------------------------ */
+/* Reusable */
+/* ------------------------------------------------*/
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+section {
+	padding: 25px 0;
+}
+
+h1, 
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+h1 {
+	margin-top: 0;
+	color: #fff;
+	margin-bottom: 20px;
+	font-size: 240%;
+}
+
+h2 {
+	font-size: 160%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #E67E22;
+	content: " ";
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+h3 {
+	font-size: 120%;
+	margin-bottom: 10px;
+}
+.box {
+	padding: 1%;
+}
+
+/* -----Paragraphs------*/
+
+.long-copy {
+	text-align: center;
+	line-height: 145%;
+	width:70%;
+	margin-left: 15%;
+}
+
+.section-overview .long-copy {
+	margin-bottom: 40px;
+	
+}
+.box p {
+	font-size: 90%;
+	line-height: 145%;
+}
+
+/* -------Icons---------*/
+
+.icon-big {
+	font-size: 160%;
+	color: #E67E22;
+}
+
+/* ------Buttons--------*/
+
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 300;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 200px;
+	transition: background-color 0.2s;
+}
+
+.btn-clr:link,
+.btn-clr:visited{
+	background-color: #E67E22;
+	border: 1px solid #E67E22;
+	margin-right: 15px;
+}
+
+.btn-ghs:link,
+.btn-ghs:visited{
+	border: 1px solid #E67E22;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #B66014;
+	border: 1px solid #B66014;
+}
+
+/* ------------------------------------------------ */
+/* Art Examples */
+/* ------------------------------------------------*/
+
+.section .art {
+	padding: 0;
+}
+
+.a-examples {
+	list-style: none;
+	width:100%;
+	display: flex;
+	
+}
+
+.a-examples li {
+	display: block;
+	position: relative;
+	flex-basis: 100%;
+	z-index: 1;
+}
+
+.artpic {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+
+.artpic img {
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: opacity 0.3s;
+} 
+
+.artpic img:hover {
+	opacity: 1;
+	object-fit: contain;
+	background-color: #fff;
+} 
+/* ------------------------------------------------ */
+/* Login */
+/* ------------------------------------------------*/
+
+input[type=text],
+input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #E67E22;
+	color: #fff;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	width: 100%;
+	border-radius: 200px;
+}
+
+button:hover {
+	background-color: #B66014;
+}
+
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #F23E18;
+	border-radius: 200px;
+}
+
+.cancelbtn:hover {
+	opacity: 70%;
+	background-color: #F23E18;
+}
+
+.imgcontainer {
+	text-align: center;
+	margin-top: 24px;
+	position: relative;
+}
+
+.inv-logo {
+	filter: invert(1);
+	width: 300px;
+	height: auto;
+}
+
+.container {
+	padding:16px;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+.modal {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.40);
+}
+
+.modal-content {
+	background-color: rgba(255,255,255,0.50);;
+	margin: 5% auto 15% auto;
+	border: 5% solid #777;
+	width: 60%
+}
+
+.animate {
+	animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+@media screen and (max-width: 450px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
