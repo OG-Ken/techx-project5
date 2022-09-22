@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import "./Login.css";
+import "./css/Login.css";
 
-export default function Login() {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,39 +9,43 @@ export default function Login() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+  const onSubmit = (event) => {
     event.preventDefault();
-  }
+    console.log(password);
+  };
 
   return (
-    <div className="Login">
-      <Form onSubmit={handleSubmit}>
-        <div className="text_area">
-          <Form.Group size="lg" controlId="email">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              autoFocus
-              type="email"
+    <div className="main">
+      <div className="sub-main">
+        <form onSubmit={onSubmit}>
+          <div>
+            <h1> Login Page </h1>
+            <input
+              className="username"
+              placeholder="Username"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Form.Group>
-        </div>
-        <div className="text_area">
-          <Form.Group size="lg" controlId="password">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
+              onChange={(event) => setEmail(event.target.value)}
+            ></input>
+          </div>
+          <div className="second-input">
+            <input
               type="password"
+              className="password"
+              placeholder="Password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
-        </div>
-
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
-        </Button>
-      </Form>
+              onChange={(event) => setPassword(event.target.value)}
+            ></input>
+          </div>
+          <div className="submit">
+            <h2> it to have error message pop up</h2>
+            <button block size="+1g" type="submit" disabled={!validateForm()}>
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
-}
+};
+
+export default Login;
