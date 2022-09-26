@@ -1,0 +1,14 @@
+h1, u {
+    color: white;
+}
+
+h2{
+    color:wheat
+}
+
+.card{
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+}

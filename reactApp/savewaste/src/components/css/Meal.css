@@ -1,0 +1,56 @@
+.page{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(177, 163, 163);
+    background: url(./img/cooking.jpg);
+    background-size: cover;
+}
+
+.subPage{
+    height: 50%;
+    width: 75%;
+    padding-top: 30px;
+    border-radius: 30px;
+    background-color: rgb(179, 178, 152);
+    opacity: 93%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.meal1{
+    grid-column: 1;
+    justify-self: center;
+}
+
+.meal2{
+    grid-column: 2;
+    justify-self: center;
+}
+
+.meal3{
+    grid-column: 3;
+    justify-self: center;
+}
+input {
+    width: 100px;
+    height: 50px;
+    border-radius: 40px;
+    box-shadow: inset 0px 0px 25px 0px rgb(119, 77, 77);
+    text-align: center;
+    font-size: larger;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    grid-column: 2;
+}

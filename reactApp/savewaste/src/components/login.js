@@ -19,9 +19,9 @@ const Login = () => {
       <div className="sub-main">
         <form onSubmit={onSubmit}>
           <div>
-            <h1> Login Page </h1>
+            <h1 className="login"> Login Page </h1>
             <input
-              className="username"
+              className="input"
               placeholder="Username"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
@@ -30,14 +30,14 @@ const Login = () => {
           <div className="second-input">
             <input
               type="password"
-              className="password"
+              className="input"
               placeholder="Password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             ></input>
           </div>
           <div className="submit">
-            <h2> it to have error message pop up</h2>
+            <h2 className="error"> it to have error message pop up</h2>
             <button block size="+1g" type="submit" disabled={!validateForm()}>
               Login
             </button>
