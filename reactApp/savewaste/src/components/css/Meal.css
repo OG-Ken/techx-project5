@@ -54,8 +54,12 @@
     justify-content: center;
 }
 
+.submit {
+    background-color: rgb(65, 65, 65);
+    border-radius: 30px;
+    font-size: 30px;
+}
 .userIDdiv{
-    
     display:flex;
     justify-content:center;
     position:relative;

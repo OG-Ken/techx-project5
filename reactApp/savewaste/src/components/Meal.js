@@ -44,11 +44,11 @@ const Meal = () => {
     const requestBody1 = {
       meal_ID: "Meal 1",
       user_ID: mealDetails.user_ID,
-      1: parseInt(mealDetails.meal1Monday),
-      2: parseInt(mealDetails.meal1Tuesday),
-      3: parseInt(mealDetails.meal1Wednesday),
-      4: parseInt(mealDetails.meal1Thursday),
-      5: parseInt(mealDetails.meal1Friday),
+      monday: parseInt(mealDetails.meal1Monday),
+      tuesday: parseInt(mealDetails.meal1Tuesday),
+      wednesday: parseInt(mealDetails.meal1Wednesday),
+      thursday: parseInt(mealDetails.meal1Thursday),
+      friday: parseInt(mealDetails.meal1Friday),
     };
 
     axios.post(registerUrl1, requestBody1).then((response) => {
@@ -59,11 +59,11 @@ const Meal = () => {
     const requestBody2 = {
       meal_ID: "Meal 2",
       user_ID: mealDetails.user_ID,
-      1: parseInt(mealDetails.meal2Monday),
-      2: parseInt(mealDetails.meal2Tuesday),
-      3: parseInt(mealDetails.meal2Wednesday),
-      4: parseInt(mealDetails.meal2Thursday),
-      5: parseInt(mealDetails.meal2Friday),
+      monday: parseInt(mealDetails.meal2Monday),
+      tuesday: parseInt(mealDetails.meal2Tuesday),
+      wednesday: parseInt(mealDetails.meal2Wednesday),
+      thursday: parseInt(mealDetails.meal2Thursday),
+      friday: parseInt(mealDetails.meal2Friday),
     };
 
     axios.post(registerUrl1, requestBody2).then((response) => {
@@ -74,11 +74,11 @@ const Meal = () => {
     const requestBody3 = {
       meal_ID: "Meal 3",
       user_ID: mealDetails.user_ID,
-      1: parseInt(mealDetails.meal3Monday),
-      2: parseInt(mealDetails.meal3Tuesday),
-      3: parseInt(mealDetails.meal3Wednesday),
-      4: parseInt(mealDetails.meal3Thursday),
-      5: parseInt(mealDetails.meal3Friday),
+      monday: parseInt(mealDetails.meal3Monday),
+      tuesday: parseInt(mealDetails.meal3Tuesday),
+      wednesday: parseInt(mealDetails.meal3Wednesday),
+      thursday: parseInt(mealDetails.meal3Thursday),
+      friday: parseInt(mealDetails.meal3Friday),
     };
 
     axios.post(registerUrl1, requestBody3).then((response) => {
