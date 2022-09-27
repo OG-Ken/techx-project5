@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Menu</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <script src="sample.js" async defer></script>
+
+    <h1>Welcome To Our Menu</h1>
+
+    <table class="center" style="width: 80%">
+      <form>
+        <tr>
+          <th>Meal</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        <tr>
+          <th>Meal 1</th>
+          <td><input type="number" placeholder="Qty" id="m11" /></td>
+          <td><input type="number" placeholder="Qty" id="m12" /></td>
+          <td><input type="number" placeholder="Qty" id="m13" /></td>
+          <td><input type="number" placeholder="Qty" id="m14" /></td>
+          <td><input type="number" placeholder="Qty" id="m15" /></td>
+        </tr>
+        <tr>
+          <th>Meal 2</th>
+          <td><input type="number" placeholder="Qty" id="m21" /></td>
+          <td><input type="number" placeholder="Qty" id="m22" /></td>
+          <td><input type="number" placeholder="Qty" id="m23" /></td>
+          <td><input type="number" placeholder="Qty" id="m24" /></td>
+          <td><input type="number" placeholder="Qty" id="m25" /></td>
+        </tr>
+        <tr>
+          <th>Meal 3</th>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+        </tr>
+        <tr>
+          <th>Meal 4</th>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+          <td><input type="number" placeholder="Qty" /></td>
+        </tr>
+      </form>
+    </table>
+    <br /><br />
+    <div class="submit">
+      <input type="button" value="Submit" onclick="getInputValue();" />
+    </div>
+  </body>
+</html>
