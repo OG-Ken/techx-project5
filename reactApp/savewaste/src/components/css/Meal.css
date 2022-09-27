@@ -54,3 +54,7 @@
     justify-content: center;
 }
 
+.userIDdiv{
+    grid-row: 2;
+}
+

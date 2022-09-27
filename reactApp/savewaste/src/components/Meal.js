@@ -11,6 +11,7 @@ const registerUrl1 =
 
 const Meal = () => {
   const [mealDetails, setMeal] = useState({
+    user_ID: "",
     meal1Monday: "0",
     meal1Tuesday: "0",
     meal1Wednesday: "0",
@@ -42,6 +43,7 @@ const Meal = () => {
     //createMeal
     const requestBody1 = {
       meal_ID: "Meal 1",
+      user_ID: mealDetails.user_ID,
       1: parseInt(mealDetails.meal1Monday),
       2: parseInt(mealDetails.meal1Tuesday),
       3: parseInt(mealDetails.meal1Wednesday),
@@ -56,6 +58,7 @@ const Meal = () => {
 
     const requestBody2 = {
       meal_ID: "Meal 2",
+      user_ID: mealDetails.user_ID,
       1: parseInt(mealDetails.meal2Monday),
       2: parseInt(mealDetails.meal2Tuesday),
       3: parseInt(mealDetails.meal2Wednesday),
@@ -70,6 +73,7 @@ const Meal = () => {
 
     const requestBody3 = {
       meal_ID: "Meal 3",
+      user_ID: mealDetails.user_ID,
       1: parseInt(mealDetails.meal3Monday),
       2: parseInt(mealDetails.meal3Tuesday),
       3: parseInt(mealDetails.meal3Wednesday),
@@ -110,6 +114,15 @@ const Meal = () => {
             drink="Passionfruit Juice"
           />
         </div>
+      </div>
+      <div className="userIDdiv">
+        <input
+          className="UserID"
+          type="text"
+          name="user_ID"
+          placeholder="User ID"
+          onChange={handleChange}
+        ></input>
       </div>
       <div className="weekly">
         <Table striped bordered hover variant="dark" className="table">
