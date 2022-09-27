@@ -1,13 +1,15 @@
 h1, u {
     color: white;
+    font-size: 22px;
 }
 
 h2{
-    color:wheat
+    color:wheat;
+    font-size: 20px;
 }
 
 .card{
-    height: 300px;
+    height: 200px;
     width: 200px;
     border-radius: 20px;
     background-color: rgb(0, 0, 0);

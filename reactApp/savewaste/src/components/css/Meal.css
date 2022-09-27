@@ -5,52 +5,52 @@
     height: 100%; 
     width: 100%;
     text-align: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: top;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     background-color: rgb(177, 163, 163);
     background: url(./img/cooking.jpg);
     background-size: cover;
 }
 
-.subPage{
-    height: 50%;
-    width: 75%;
-    padding-top: 30px;
+.mealPostings{
+    height: 200px;
+    width: fill;
+    display: inline-flex;
+    justify-content: space-around;
+    
+}
+
+
+.weekly{
+    height: 700px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.table{
+    height: 400px;
+    width: 700px;
+    grid-column: 2;
+    grid-row:2;
     border-radius: 30px;
     background-color: rgb(179, 178, 152);
     opacity: 93%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: right;
 }
 
-.meal1{
-    grid-column: 1;
-    justify-self: center;
-}
-
-.meal2{
-    grid-column: 2;
-    justify-self: center;
-}
-
-.meal3{
-    grid-column: 3;
-    justify-self: center;
-}
-input {
+.table input {
+    height: 40px;
     width: 100px;
-    height: 50px;
-    border-radius: 40px;
-    box-shadow: inset 0px 0px 25px 0px rgb(119, 77, 77);
+    font-size: 40px;
     text-align: center;
-    font-size: larger;
 }
 
-button {
-    color: rgb(255, 255, 255);
-    background-color: black;
+.buttons{
+    display: stretch;
     grid-column: 2;
+    grid-row: 3;
+    justify-content: center;
 }
+

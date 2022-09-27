@@ -1,0 +1,64 @@
+.main{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(177, 163, 163);
+    background: url(./img/cooking.jpg);
+    background-size: cover;
+    opacity: 75%;
+}
+
+.sub-main{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    width: 35%;
+    padding-top: 30px;
+    border-radius: 30px;
+    background-color: rgb(179, 178, 152);
+    align-items: center;
+    opacity: 93%;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+input{ 
+    width: 300px;
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px rgb(119, 77, 77);
+    align-items: center;
+    text-align: center;
+} 
+
+.second-input {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+h2{
+    font-size: small;
+    color: red;
+}
+button {
+    width: 160px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: rgb(78, 78, 82);
+    color: white;
+    font-size: 25px;
+    border: none; 
+}
