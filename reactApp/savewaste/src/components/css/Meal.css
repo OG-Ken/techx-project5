@@ -23,7 +23,7 @@
 
 
 .weekly{
-    height: 700px;
+    height: 600px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
@@ -55,6 +55,17 @@
 }
 
 .userIDdiv{
-    grid-row: 2;
+    
+    display:flex;
+    justify-content:center;
+    position:relative;
 }
 
+.UserID {
+    height: 40px;
+    font-size: 30px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
