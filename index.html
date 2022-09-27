@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Portal: Right Middle School</title>
+</head>
+<body>
+    <button id="getTest">Submit</button>
+    <button id="getMeals">Grab Meal Queue</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById('getTest').addEventListener('click', getTest);
+        document.getElementById('getMeals').addEventListener('click', getMeals);
+
+        function getTest(){
+            fetch('sample.txt')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('output').innerHTML = data;
+            })
+            .catch((err) => console.log(err))
+        }
+
+        function getMeals(){
+            fetch('https://cozqsw9158.execute-api.us-east-2.amazonaws.com/dev/cafeteria')
+            .then((res) => res.json())
+            .then((data => {
+                let output = '<h2>Meal Queue</h2>';
+                data.forEach(function(meals){
+                    output += `
+                        <div>
+                            <h2>${meals.meal_ID}</h3>
+                            <p>${meals.user_ID}</p>
+                            <p>${meals.monday}</p>
+                            <p>${meals.tuesday}</p>
+                            <p>${meals.wednesday}</p>
+                            <p>${meals.thursday}</p>
+                            <p>${meals.friday}</p>
+                        </div>
+                    `;
+                    let mondayTotal = mondayTotal + meals.monday;
+                    let tuesdayTotal = tuesdayTotal + meals.tuesday;
+                    let wednesdayTotal = wednesdayTotal + meals.wednesday;
+                    let thursdayTotal = thursdayTotal + meals.thursday;
+                    let fridayTotal = fridayTotal + meals.friday;
+                });
+                document.getElementById('output').innerHTML = output;
+            }))
+        }
+        //     fetch('https://cozqsw9158.execute-api.us-east-2.amazonaws.com/dev/cafeteria')
+        //     .then((res) => res.json())
+        //     .then((data) => {
+        //         let output = '<h2>Meal Queue</h2>';
+        //         data.forEach(function(meal) {
+        //             output += `
+        //                 <div>
+        //                     <h>Meal: ${meal.meal_ID}</h3>
+        //                     <li>Classroom Teacher: ${meal.user_ID}</li>
+        //                     <li>Monday: ${meal.monday}</li>
+        //                     <li>Tuesday: ${meal.tuesday}</li>
+        //                     <li>Wednesday: ${meal.wednesday}</li>
+        //                     <li>Thrusday: ${meal.thursday}</li>
+        //                     <li>Friday: ${meal.friday}</li>              
+        //                 </div>
+        //             `;
+        //         });
+        //         document.getElementById('output').innerHTML = output;
+        //     })
+        // }
+
+
+//        data.forEach(function(meal){
+
+        
+
+    </script>
+</body>
+</html>
