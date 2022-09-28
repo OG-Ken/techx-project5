@@ -1,0 +1,85 @@
+.page{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    align-items: top;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgb(177, 163, 163);
+    background: url(./img/cooking.jpg);
+    background-size: cover;
+}
+
+.mealPostings{
+    height: 200px;
+    width: fill;
+    display: inline-flex;
+    justify-content: space-around;
+    
+}
+
+.weekly{
+    height: 600px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.table{
+    height: 400px;
+    width: 700px;
+    grid-column: 2;
+    grid-row:2;
+    border-radius: 30px;
+    background-color: rgb(179, 178, 152);
+    opacity: 93%;
+    justify-self: right;
+}
+
+.table input {
+    height: 40px;
+    width: 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.buttons{
+    display: stretch;
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: center;
+}
+
+.submit {
+    background-color: rgb(65, 65, 65);
+    border-radius: 30px;
+    font-size: 30px;
+}
+.userIDdiv{
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.success{
+    background-color: blue;
+    justify-content: center;
+    position: relative;
+}
+
+.success h1 {
+    position: absolute;
+    justify-self: right;
+    bottom: 0;
+}
+.UserID {
+    height: 40px;
+    font-size: 30px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Portal: Right Middle School</title>
+</head>
+<body>
+    <button id="getTest" href="#">Grab User Page</button>
+    <button id="getMeals" >Grab Meal Queue</button>
+    <button id="getTotals">Grab Meal Totals</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById('getTest').addEventListener('click', getTest);
+        document.getElementById('getMeals').addEventListener('click', getMeals);
+        document.getElementById('getTotals').addEventListener('click', getTotals);
+        
+        function getTest(){
+            fetch('sample.txt')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('output').innerHTML = data;
+            })
+            .catch((err) => console.log(err))
+        }
+
+        function getTotals(){
+            fetch('https://cozqsw9158.execute-api.us-east-2.amazonaws.com/dev/cafeteria')
+            .then((res) => res.json())
+            .then((data => {
+                let output = '<h2>Meal Totals</h2>';
+                let mm1 = 0;
+                let mt1 = 0;
+                let mw1 = 0;
+                let mu1 = 0;
+                let mf1 = 0;
+                let mm2 = 0;
+                let mt2 = 0;
+                let mw2 = 0;
+                let mu2 = 0;
+                let mf2 = 0;
+                let mm3 = 0;
+                let mt3 = 0;
+                let mw3 = 0;
+                let mu3 = 0;
+                let mf3 = 0;
+                let output1 = "";
+                let output2 = "";
+                let output3 = "";
+                data.forEach(function(meals){
+                    if(meals.meal_ID == 'Meal 1'){
+                        mm1 += meals.monday;
+                        mt1 += meals.tuesday;
+                        mw1 += meals.wednesday;
+                        mu1 += meals.thursday;
+                        mf1 += meals.friday;
+                        output1 = `
+                        <h3>Meal 1 Totals</h3>
+                            <p> 
+                                Monday: ${mm1}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Tuesday: ${mt1}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${mw1}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${mu1}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Friday: ${mf1}&nbsp&nbsp&nbsp | 
+                            </p>
+                        `;
+                    } else if (meals.meal_ID == 'Meal 2'){
+                        mm2 += meals.monday;
+                        mt2 += meals.tuesday;
+                        mw2 += meals.wednesday;
+                        mu2 += meals.thursday;
+                        mf2 += meals.friday;
+                        output2 = `
+                        <h3>Meal 2 Totals</h3>
+                            <p> 
+                                Monday: ${mm2}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Tuesday: ${mt2}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${mw2}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${mu2}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Friday: ${mf2}&nbsp&nbsp&nbsp | 
+                            </p>
+                        `;
+                    } else if (meals.meal_ID == 'Meal 3'){
+                        mm3 += meals.monday;
+                        mt3 += meals.tuesday;
+                        mw3 += meals.wednesday;
+                        mu3 += meals.thursday;
+                        mf3 += meals.friday;
+                        output3 = `
+                        <h3>Meal 3 Totals</h3>
+                            <p> 
+                                Monday: ${mm3}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Tuesday: ${mt3}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${mw3}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${mu3}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Friday: ${mf3}&nbsp&nbsp&nbsp | 
+                            </p>
+                        `;
+                    }
+                },
+                
+                );
+                output = output1 + output2 + output3;
+                document.getElementById('output').innerHTML = output;
+            }))
+        }
+        function getMeals(){
+            
+            fetch('https://cozqsw9158.execute-api.us-east-2.amazonaws.com/dev/cafeteria')
+            .then((res) => res.json())
+            .then((data => {
+                let output = '<h2>Meal Queue</h2>';
+                data.forEach(function(meals){
+                        output += `
+                            <h3>${meals.user_ID}</h3>
+                            <p> 
+                                Meal: ${meals.meal_ID}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Monday: ${meals.monday}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Tuesday: ${meals.tuesday}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${meals.wednesday}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Thrusday: ${meals.thursday}&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp
+                                Friday: ${meals.friday}&nbsp&nbsp&nbsp | 
+                            </p>
+                        `;
+                }
+                );
+
+                document.getElementById('output').innerHTML = output;
+            }))
+        }
+    </script>
+</body>
+</html>
