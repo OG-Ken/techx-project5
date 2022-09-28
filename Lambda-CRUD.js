@@ -60,20 +60,18 @@ async function getCafeteria() {
     const params = {
         TableName: dynamodbTableName
     };
-    const allItems = await scanDynamoRecornds(params, []);
-    const body = {
-        items: allItems
-    };
+    const allItems = await scanDynamoRecords(params, []);
+    const body = allItems;
     return buildResponse(200, body);
 }
 //Logic called to do a full table scan. This is called separately 
-async function scanDynamoRecornds(scanParams, itemArray) {
+async function scanDynamoRecords(scanParams, itemArray) {
     try {
         const dynamoData = await dynamodb.scan(scanParams).promise();
         itemArray = itemArray.concat(dynamoData.Items);
         if (dynamoData.LastEvaluatedKey) {
             scanParams.ExclusiveStartKey = dynamoData.LastEvaluatedKey;
-            return await scanDynamoRecornds(scanParams, itemArray);
+            return await scanDynamoRecords(scanParams, itemArray);
         }
         return itemArray;
     }   catch(error) {
