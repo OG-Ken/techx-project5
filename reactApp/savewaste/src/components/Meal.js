@@ -115,6 +115,9 @@ const Meal = () => {
           />
         </div>
       </div>
+      <div className="success">
+        <h1>Meal Supply Successfully Uploaded </h1>
+      </div>
       <div className="userIDdiv">
         <input
           className="UserID"

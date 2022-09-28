@@ -21,7 +21,6 @@
     
 }
 
-
 .weekly{
     height: 600px;
     display: grid;
@@ -65,6 +64,17 @@
     position:relative;
 }
 
+.success{
+    background-color: blue;
+    justify-content: center;
+    position: relative;
+}
+
+.success h1 {
+    position: absolute;
+    justify-self: right;
+    bottom: 0;
+}
 .UserID {
     height: 40px;
     font-size: 30px;
