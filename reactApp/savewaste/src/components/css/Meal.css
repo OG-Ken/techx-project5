@@ -37,6 +37,11 @@
     background-color: rgb(179, 178, 152);
     opacity: 93%;
     justify-self: right;
+<<<<<<< HEAD
+=======
+    position: relative;
+    bottom: 60px;
+>>>>>>> development
 }
 
 .table input {
@@ -51,6 +56,7 @@
     grid-column: 2;
     grid-row: 3;
     justify-content: center;
+<<<<<<< HEAD
 }
 
 .submit {
@@ -74,12 +80,98 @@
     position: absolute;
     justify-self: right;
     bottom: 0;
+=======
+    position: relative;
+}
+
+.buttonfx{
+    color: black; /* button text color */
+    outline:none;
+    background-color:#259f6c;
+    border: none;
+    border-radius: 20px;
+    border-bottom: 4px solid #eee;
+    letter-spacing: 0.0625em;
+    padding: 8px 10px; 
+    text-transform: uppercase;
+    font: bold 16px 'Bitter', sans-serif; /* use google font */
+    line-height: 2;
+    position: relative;
+    bottom: 30px;
+      display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+      text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+    overflow: hidden;
+    transition: all .5s;
+  }
+  
+  
+  .buttonfx:before,
+  .buttonfx:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #259f6c; /* onhover background color */
+    z-index: -1;
+    transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+    transition: all .5s;
+  }
+  
+  .buttonfx:before{
+    background: #bfc910; /* button default background color */
+    z-index: -2;
+    transform: translate3D(0,0,0);
+  }
+  
+  .buttonfx:hover{
+      color: white;
+  }
+  
+  .buttonfx:hover:after{
+    transform: translate3D(0,0,0);
+    transition: all .5s;
+  }
+.userIDdiv{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content:center;
+}
+
+
+.success{
+    justify-self: center;
+    position: relative;
+    top: 20px;
+}
+
+.success h1 {
+    position: relative;
+    top: 30px;
+    background-color: rgb(179, 178, 152);
+    border-radius: 30px;
+    width: 400px;
+    justify-self: center;
+    bottom: 0;
+    color: black;
+    
+>>>>>>> development
 }
 .UserID {
     height: 40px;
     font-size: 30px;
     border-radius: 30px;
+<<<<<<< HEAD
     position: absolute;
     bottom: 0;
+=======
+    bottom: 0;
+    grid-row: 2;
+>>>>>>> development
     text-align: center;
 }

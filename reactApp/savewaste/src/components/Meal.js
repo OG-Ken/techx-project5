@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import MealCard from "./MealCard";
 import "./css/Meal.css";
 import { useState } from "react";
@@ -85,6 +87,8 @@ const Meal = () => {
       console.log(response);
       console.log(response.data);
     });
+
+    toast.success("Success", { position: toast.POSITION.TOP_CENTER });
   };
 
   return (
@@ -114,9 +118,6 @@ const Meal = () => {
             drink="Passionfruit Juice"
           />
         </div>
-      </div>
-      <div className="success">
-        <h1>Meal Supply Successfully Uploaded </h1>
       </div>
       <div className="userIDdiv">
         <input
@@ -273,9 +274,10 @@ const Meal = () => {
         </Table>
         <div className="buttons">
           <form onSubmit={handleSubmit}>
-            <button type="submit" className="submit">
+            <button type="submit" className="buttonfx">
               Submit
             </button>
+            <ToastContainer />
           </form>
         </div>
       </div>
